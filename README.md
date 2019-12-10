@@ -1,92 +1,47 @@
 
-# Module 3 -  Final Project Specifications
+# Northwind Project by Jacob Tadesse
 
 ## Introduction
 
-In this lesson, we'll review all the guidelines and specifications for the final project for Module 3.
+Northwind is a specialty food distributor, with employees in the United States and United Kingdom. The board of directors of Northwind would like to determine operational success and employee performance to justify expansion. The board chair has tasked the CEO with auditing  sales and employee data housing in the company's `Northwind_small` database. 
+
 
 ## Objectives
 
-* Understand all required aspects of the Final Project for Module 3
-* Understand all required deliverables
-* Understand what constitutes a successful project
+The CEO of Northwind has hired my consultancy to answer the following quesitons based on the data:
 
-### Final Project Summary
+- <b>Initial Question:</b> *Does discount amount have a statistically significant effect on the quantity of a product in an order? If so, at what level(s) of discount?*
+- <b>Second Question:</b> *Are US employees generating the same profit on average as UK employees?*
+- <b>Third Question:</b> *On average, are our teams generating more profit from inside sales or outside sales in the US?*
+- <b>Final Question:</b> *Are all employees generating equal revenue over time?*
 
-Another module down--you're half way there!
 
-<img src='https://raw.githubusercontent.com/learn-co-curriculum/dsc-mod-3-project/master/halfway-there.gif'>
+## The Project
 
-For the culmination of Module 3, you just need to complete the final project!
+For this project, I worked with the `Northwind database`--a free, open-source dataset created by Microsoft containing data from a fictional company. I also used a .py file with a few one-sample and two-sample statistical tests saved in the `Test.Stats` directory.
 
-### The Project
+`import tools.stats as t
+from tools.stats import *
+help(t)`
 
-For this project, you'll be working with the Northwind database--a free, open-source dataset created by Microsoft containing data from a fictional company. You probably remember the Northwind database from our section on Advanced SQL. Here's the schema for the Northwind database:
+### Northwind Schema
 
 <img src='https://raw.githubusercontent.com/learn-co-curriculum/dsc-mod-3-project/master/Northwind_ERD_updated.png'>
 
-The goal of this project is to test your ability to gather information from a real-world database and use your knowledge of statistical analysis and hypothesis testing to generate analytical insights that can be of value to the company.
 
-## The Deliverables
+## The Results
 
-The goal of your project is to query the database to get the data needed to perform a statistical analysis.  In this statistical analysis, you'll need to perform a hypothesis test (or perhaps several) to answer the following question:
+The entire experiment with statistical test can be found in the `Northwind` Notebook in this repository. My results are below:
 
-**_Does discount amount have a statistically significant effect on the quantity of a product in an order? If so, at what level(s) of discount?_**
+- <b>Initial Question:</b> *Does discount amount have a statistically significant effect on the quantity of a product in an order? If so, at what level(s) of discount?*
+    - On average, customers order quantity increases at around 9%. Our recommendation around order discounts would be to create a campaign for 9% discounts to current and future customers in the selected area of expansion. This targeted campaign will significantly increase order quantity, in any new regions or territories of expansion.
 
-In addition to answering this question with a hypothesis test, you will also need to come up with **_at least 3 other hypotheses to test on your own_**.  These can by anything that you think could be imporant information for the company.
+- <b>Second Question:</b> *Are US employees generating the same profit on average as UK employees?*
+    - On average, we do not see a significant difference in profit generation between countries. Our recommendation would be to expand offices in other regions to replicate the profit generated from teams in the US and the UK.
 
-For this hypothesis, be sure to specify both the **_null hypothesis_** and the **_alternative hypothesis_** for your question.  You should also specify if this is one-tail or a two-tail test.
+- <b>Third Question:</b> *On average, are our teams generating more profit from inside sales or outside sales in the US?*
+    - On average, we do not see a significant difference in revenue generatation between inside and outside teams. Our recommendation would be to expand teams in other regions to replicate the profit generated from inside and outside sales in the US and the UK.
 
-For online students, there will be four deliverables for this project:
-
-1. A **_Jupyter Notebook_** containing any code you've written for this project. This work will need to be pushed to your GitHub repository in order to submit your project.
-2. An organized **README.md** file in the GitHub repository that describes the contents of the repository. This file should be the source of information for navigating through the repository.
-3. A **_[Blog Post](https://github.com/learn-co-curriculum/dsc-welcome-blogging)_**.
-4. An **_"Executive Summary" PowerPoint Presentation_** that explains the hypothesis tests you ran, your findings, and their relevance to company stakeholders.  
-
-Note: On-campus students may have different delivarables, please speak with your instructor. 
-
-### Jupyter Notebook Must-Haves
-
-For this project, your Jupyter Notebook should meet the following specifications:
-
-**_Organization/Code Cleanliness_**
-
-* The notebook should be well organized, easy to follow, and code is commented where appropriate.  
-<br>  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code. All functions have docstrings that act as professional-quality documentation.  
-<br>      
-* The notebook is written to technical audiences with a way to both understand your approach and reproduce your results. The target audience for this deliverable is other data scientists looking to validate your findings.  
-<br>    
-* Any SQL code written to source data should also be included.  
-
-**_Findings_**
-
-* Your notebook should clearly show how you arrived at your results for each hypothesis test, including how you calculated your p-values.   
-<br>
-* You should also include any other statistics that you find relevant to your analysis, such as effect size.
-
-### Blog Post Must-Haves
-
-Refer back to the [Blogging Guidelines](https://github.com/learn-co-curriculum/dsc-welcome-blogging) for the technical requirements and blog ideas.
-
-
-### Executive Summary Must-Haves
-
-Your presentation should:
-
-* Contain between 5-10 professional quality slides detailing:
-<br>  
-    * A high-level overview of your methodology  
-    <br>  
-    * The results of your hypothesis tests  
-    <br>  
-    * Any real-world recommendations you would like to make based on your findings (ask yourself--why should the executive team care about what you found? How can your findings help the company?)  
-    <br>  
-* Take no more than 5 minutes to present  
-<br>  
-* Avoid technical jargon and explain results in a clear, actionable way for non-technical audiences.  
-
-## Grading Rubric 
-
-Online students can find a PDF of the grading rubric for this project [here](https://github.com/learn-co-curriculum/dsc-mod-3-project/blob/master/module3_project_rubric.pdf). _Note: On-campus students may have different requirements, please speak with your instructor._
+- <b>Final Question:</b> *Are all employees generating equal revenue over time?*
+    - On an average day, we see significant difference in average profit generatation between employees. Our recommendation would be to promote Anne Dodsworth from Sales Representative to Sales Manager for new regions to replicate her daily profit average of roughly $645 per day, in her past experience in the British Isles, UK.
+Below are our reccommendations for Future Work:
